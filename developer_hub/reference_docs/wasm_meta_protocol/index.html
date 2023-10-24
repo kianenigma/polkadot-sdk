@@ -40,7 +40,7 @@ end
 <p>The client and the runtime need to communicate. This is done through two concepts:</p>
 <ol>
 <li><strong>Host functions</strong>: a way for the (WASM) runtime to talk to the client. All host functions
-are defined in [<code>sp_io</code>]. For example, [<code>sp_io::storage</code>] are the set of host functions that
+are defined in <a href="../../../sp_io/index.html" title="mod sp_io"><code>sp_io</code></a>. For example, <a href="../../../sp_io/storage/index.html" title="mod sp_io::storage"><code>sp_io::storage</code></a> are the set of host functions that
 allow the runtime to read and write data to the on-chain state.</li>
 <li><strong>Runtime APIs</strong>: a way for the client to talk to the Wasm runtime. Runtime APIs are defined
 using macros and utilities in [<code>sp_api</code>]. For example, [<code>sp_api::Core</code>] is the most
@@ -110,7 +110,7 @@ end
 </pre><script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";var doc_theme = localStorage.getItem("rustdoc-theme");if (doc_theme === "dark" || doc_theme === "ayu") mermaid.initialize({theme: "dark"});</script>
 <h3 id="state"><a href="#state">State</a></h3>
 <p>From the previous sections, we know that the a database component is part of the client, not the
-runtime. We also hinted that a set of host functions ([<code>sp_io::storage</code>]) are how the runtime
+runtime. We also hinted that a set of host functions (<a href="../../../sp_io/storage/index.html" title="mod sp_io::storage"><code>sp_io::storage</code></a>) are how the runtime
 issues commands to the client to read/write to the state. Let’s dive deeper into this.</p>
 <p>The state of the blockchain, what we seek to come to consensus about, is indeed <em>kept</em> in the
 client side. Nonetheless, the runtime is the only component that:</p>

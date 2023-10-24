@@ -2,7 +2,7 @@
 type-safe manner.</p>
 <h2 id="trait-based-programming"><a href="#trait-based-programming">Trait-based Programming</a></h2>
 <p>This documents walks you over a peculiar way of using Rust’s <code>trait</code> items. This pattern is
-abundantly used within [<code>frame</code>] and is therefore paramount important for a smooth transition
+abundantly used within <a href="../../../frame/index.html" title="mod frame"><code>frame</code></a> and is therefore paramount important for a smooth transition
 into it.</p>
 <p>The rest of this document assumes familiarity with the Rust book’s advance trait section.
 Moreover, we use the [<code>frame::traits::Get</code>].</p>
@@ -183,7 +183,7 @@ Consider the following example, in which we fetch the <code>type Balance</code> 
 }</code></pre></div>
 <p>Notice the final <code>type BalanceOf</code> and how it is defined. Using such aliases to shorten the
 length of fully-qualified syntax is a common pattern in FRAME.</p>
-<p>The above example is almost identical to the well-known (and somewhat notorious) <code>type BalanceOf</code> that is often used in the context of [<code>frame::traits::fungible</code>].</p>
+<p>The above example is almost identical to the well-known (and somewhat notorious) <code>type BalanceOf</code> that is often used in the context of <a href="../../../frame_support/traits/tokens/fungible/index.html" title="mod frame_support::traits::tokens::fungible"><code>frame::traits::fungible</code></a>.</p>
 
 <div class="example-wrap"><pre class="rust rust-example-rendered"><code><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">type </span>BalanceOf&lt;T&gt; =
 	&lt;&lt;T <span class="kw">as </span>Config&gt;::Currency <span class="kw">as </span>Currency&lt;&lt;T <span class="kw">as </span>frame_system::Config&gt;::AccountId&gt;&gt;::Balance;</code></pre></div>

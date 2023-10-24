@@ -28,7 +28,7 @@ accord. This enables the Runtime to become inherently upgradeable, crucially wit
 upgrade is merely a matter of the WASM blob being changed in the state, which is, in principle,
 same as updating an account’s balance. Learn more about this in detail, in
 <a href="../../reference_docs/wasm_meta_protocol/index.html" title="mod developer_hub::reference_docs::wasm_meta_protocol"><code>crate::reference_docs::wasm_meta_protocol</code></a>.</p>
-<p>[<code>frame</code>], Substrate’s default runtime development library, takes the above safety practices
+<p><a href="../../../frame/index.html" title="mod frame"><code>frame</code></a>, Substrate’s default runtime development library, takes the above safety practices
 even further by embracing a declarative programming model whereby correctness is enhanced and
 the system is highly configurable through parameterization. Learn more about this in
 <a href="../../reference_docs/trait_based_programming/index.html" title="mod developer_hub::reference_docs::trait_based_programming"><code>crate::reference_docs::trait_based_programming</code></a>.</p>
@@ -58,10 +58,10 @@ crates, [<code>sc_rpc_api</code>] and [<code>sc_client_db</code>], all of which 
 side.</li>
 <li><code>sp-*</code> (short for <em>substrate-primitives</em>) crates, located under <code>./primitives</code> folder. These
 are the traits that glue the client and runtime together, but are not opinionated about what
-framework is using for building the runtime. Notable examples are [<code>sp_api</code>] and [<code>sp_io</code>],
+framework is using for building the runtime. Notable examples are [<code>sp_api</code>] and <a href="../../../sp_io/index.html" title="mod sp_io"><code>sp_io</code></a>,
 which form the communication bridge between the client and runtime.</li>
 <li><code>pallet-*</code> and <code>frame-*</code> crates, located under <code>./frame</code> folder. These are the crates related
-to FRAME. See [<code>frame</code>] for more information.</li>
+to FRAME. See <a href="../../../frame/index.html" title="mod frame"><code>frame</code></a> for more information.</li>
 </ul>
 <h4 id="wasm-build"><a href="#wasm-build">Wasm Build</a></h4>
 <p>Many of the Substrate crates, such as entire <code>sp-*</code>, need to compile to both Wasm (when a Wasm
