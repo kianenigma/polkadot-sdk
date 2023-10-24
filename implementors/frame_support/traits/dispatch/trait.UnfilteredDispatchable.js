@@ -1,3 +1,4 @@
 (function() {var implementors = {
+"developer_hub":[["impl&lt;T: <a class=\"trait\" href=\"developer_hub/tutorial/currency_simple/pallet/trait.Config.html\" title=\"trait developer_hub::tutorial::currency_simple::pallet::Config\">Config</a>&gt; <a class=\"trait\" href=\"frame_support/traits/dispatch/trait.UnfilteredDispatchable.html\" title=\"trait frame_support::traits::dispatch::UnfilteredDispatchable\">UnfilteredDispatchable</a> for <a class=\"enum\" href=\"developer_hub/tutorial/currency_simple/pallet/enum.Call.html\" title=\"enum developer_hub::tutorial::currency_simple::pallet::Call\">Call</a>&lt;T&gt;"]],
 "frame":[]
 };if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

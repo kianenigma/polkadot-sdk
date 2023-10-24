@@ -1090,6 +1090,7 @@
 <a href="#1090" id="1090">1090</a>
 <a href="#1091" id="1091">1091</a>
 <a href="#1092" id="1092">1092</a>
+<a href="#1093" id="1093">1093</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file is part of Substrate.
 
 // Copyright (C) Parity Technologies (UK) Ltd.
@@ -1128,7 +1129,8 @@
 /// returned from a dispatch.
 </span><span class="kw">pub type </span>DispatchResultWithPostInfo = sp_runtime::DispatchResultWithInfo&lt;PostDispatchInfo&gt;;
 
-<span class="doccomment">/// Unaugmented version of `DispatchResultWithPostInfo` that can be returned from
+<span class="attr">#[docify::export]
+</span><span class="doccomment">/// Un-augmented version of `DispatchResultWithPostInfo` that can be returned from
 /// dispatchable functions and is automatically converted to the augmented type. Should be
 /// used whenever the `PostDispatchInfo` does not need to be overwritten. As this should
 /// be the common case it is the implicit return type when none is specified.

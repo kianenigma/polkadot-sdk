@@ -354,6 +354,11 @@
 <a href="#354" id="354">354</a>
 <a href="#355" id="355">355</a>
 <a href="#356" id="356">356</a>
+<a href="#357" id="357">357</a>
+<a href="#358" id="358">358</a>
+<a href="#359" id="359">359</a>
+<a href="#360" id="360">360</a>
+<a href="#361" id="361">361</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file is part of Substrate.
 
 // Copyright (C) Parity Technologies (UK) Ltd.
@@ -422,6 +427,14 @@
 
 <span class="doccomment">/// The logging library of the runtime. Can be normally like the classic `log` crate.
 </span><span class="kw">pub use </span>log;
+
+<span class="doccomment">/// A list of all macros used within the main [`pallet`] macro.
+///
+/// Note: All of these macros are &quot;stubs&quot; and not really usable outside `#[pallet] mod pallet { ..
+/// }`. They are mainly provided for documentation and IDE support.
+</span><span class="kw">pub mod </span>pallet_macros {
+	<span class="kw">pub use </span>frame_support::pallet_macros::<span class="kw-2">*</span>;
+}
 
 <span class="doccomment">/// The main prelude of FRAME.
 ///
@@ -518,8 +531,8 @@
 		<span class="doccomment">/// Types to define your runtime version.
 		</span><span class="kw">pub use </span>sp_version::{create_runtime_str, runtime_version, RuntimeVersion};
 
-		<span class="comment">// TODO: this is a temporary hack
-		</span><span class="kw">pub use </span>frame_support::{<span class="self">self</span>};
+		<span class="doccomment">/// Macro to implement runtime APIs.
+		</span><span class="kw">pub use </span>sp_api::impl_runtime_apis;
 
 		<span class="attr">#[cfg(feature = <span class="string">&quot;std&quot;</span>)]
 		</span><span class="kw">pub use </span>sp_version::NativeVersion;
@@ -543,9 +556,6 @@
 		</span><span class="kw">pub use </span>sp_core::OpaqueMetadata;
 		<span class="kw">pub use </span>sp_inherents::{CheckInherentsResult, InherentData};
 		<span class="kw">pub use </span>sp_runtime::ApplyExtrinsicResult;
-
-		<span class="doccomment">/// Macro to implement runtime APIs.
-		</span><span class="kw">pub use </span>sp_api::impl_runtime_apis;
 
 		<span class="kw">pub use </span>frame_system_rpc_runtime_api::<span class="kw-2">*</span>;
 		<span class="kw">pub use </span>sp_api::{<span class="self">self</span>, <span class="kw-2">*</span>};

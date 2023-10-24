@@ -221,6 +221,7 @@
 <a href="#221" id="221">221</a>
 <a href="#222" id="222">222</a>
 <a href="#223" id="223">223</a>
+<a href="#224" id="224">224</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! # Trait-based Programming
 //!
 //! This documents walks you over a peculiar way of using Rust&#39;s `trait` items. This pattern is
@@ -331,8 +332,11 @@
 //! - &lt;https://github.com/paritytech/substrate/issues/13836&gt;
 //! - &lt;https://www.youtube.com/watch?v=6cp10jVWNl4&gt;
 //! - &lt;https://substrate.stackexchange.com/questions/2228/type-casting-to-trait-t-as-config&gt;
+</span><span class="attr">#![allow(unused)]
 
-</span><span class="attr">#[docify::export]
+</span><span class="kw">use </span>frame::traits::Get;
+
+<span class="attr">#[docify::export]
 </span><span class="kw">mod </span>basic {
 	<span class="kw">struct </span>Pallet;
 
@@ -341,7 +345,7 @@
 	<span class="kw">type </span>MinTransfer = frame::traits::ConstU128&lt;<span class="number">10</span>&gt;;
 
 	<span class="kw">impl </span>Pallet {
-		<span class="kw">fn </span>transfer(from: AccountId, to: AccountId, amount: Balance) {
+		<span class="kw">fn </span>transfer(_from: AccountId, _to: AccountId, _amount: Balance) {
 			<span class="macro">todo!</span>()
 		}
 	}
@@ -349,8 +353,6 @@
 
 <span class="attr">#[docify::export]
 </span><span class="kw">mod </span>generic {
-	<span class="kw">use super</span>::<span class="kw-2">*</span>;
-
 	<span class="kw">struct </span>Pallet&lt;AccountId, Balance, MinTransfer&gt; {
 		_marker: std::marker::PhantomData&lt;(AccountId, Balance, MinTransfer)&gt;,
 	}
@@ -361,7 +363,7 @@
 		MinTransfer: frame::traits::Get&lt;Balance&gt;,
 		AccountId: From&lt;[u8; <span class="number">32</span>]&gt;,
 	{
-		<span class="kw">fn </span>transfer(from: AccountId, to: AccountId, amount: Balance) {
+		<span class="kw">fn </span>transfer(_from: AccountId, _to: AccountId, amount: Balance) {
 			<span class="macro">assert!</span>(amount &gt;= MinTransfer::get());
 			<span class="macro">unimplemented!</span>();
 		}
@@ -380,7 +382,7 @@
 
 	<span class="kw">struct </span>Pallet&lt;T: Config&gt;(std::marker::PhantomData&lt;T&gt;);
 	<span class="kw">impl</span>&lt;T: Config&gt; Pallet&lt;T&gt; {
-		<span class="kw">fn </span>transfer(from: T::AccountId, to: T::AccountId, amount: T::Balance) {
+		<span class="kw">fn </span>transfer(_from: T::AccountId, _to: T::AccountId, amount: T::Balance) {
 			<span class="macro">assert!</span>(amount &gt;= T::MinTransfer::get());
 			<span class="macro">unimplemented!</span>();
 		}
@@ -402,7 +404,7 @@
 
 	<span class="kw">pub struct </span>Pallet&lt;T: Config&gt;(std::marker::PhantomData&lt;T&gt;);
 	<span class="kw">impl</span>&lt;T: Config&gt; Pallet&lt;T&gt; {
-		<span class="kw">fn </span>transfer(from: T::AccountId, to: T::AccountId, amount: T::Balance) {
+		<span class="kw">fn </span>transfer(_from: T::AccountId, _to: T::AccountId, amount: T::Balance) {
 			<span class="macro">assert!</span>(amount &gt;= T::MinTransfer::get());
 			<span class="macro">unimplemented!</span>();
 		}
@@ -433,9 +435,9 @@
 	<span class="kw">struct </span>Pallet&lt;T: Config&gt;(std::marker::PhantomData&lt;T&gt;);
 	<span class="kw">impl</span>&lt;T: Config&gt; Pallet&lt;T&gt; {
 		<span class="kw">fn </span>transfer(
-			from: T::AccountId,
-			to: T::AccountId,
-			amount: &lt;&lt;T <span class="kw">as </span>Config&gt;::Currency <span class="kw">as </span>CurrencyTrait&gt;::Balance,
+			_from: T::AccountId,
+			_to: T::AccountId,
+			_amount: &lt;&lt;T <span class="kw">as </span>Config&gt;::Currency <span class="kw">as </span>CurrencyTrait&gt;::Balance,
 		) {
 			<span class="macro">unimplemented!</span>();
 		}

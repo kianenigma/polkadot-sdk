@@ -26,6 +26,7 @@
 <a href="#26" id="26">26</a>
 <a href="#27" id="27">27</a>
 <a href="#28" id="28">28</a>
+<a href="#29" id="29">29</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! # State Transition Function
 //!
 //! This document briefly explains how in the context of substrate based blockchains, we view the
@@ -33,8 +34,9 @@
 //!
 //! Recall that a blockchain&#39;s main purpose is to help a permissionless set of entities to agree on
 //! a shared data-set, and how it evolves. This is called the **State**, also referred to as
-//! &quot;onchain&quot; data. The state is where the account balance of each user is, for example, stored, and
-//! there is a canonical version of it that everyone agrees upon.
+//! &quot;onchain&quot; data, or *Storage* in the context of FRAME. The state is where the account balance of
+//! each user is, for example, stored, and there is a canonical version of it that everyone agrees
+//! upon.
 //!
 //! Then, recall that a typical blockchain system will alter its state through execution of blocks.
 //! *The component that dictates how this state alteration can happen is called the state transition
