@@ -23,29 +23,39 @@
 <a href="#23" id="23">23</a>
 <a href="#24" id="24">24</a>
 <a href="#25" id="25">25</a>
-</pre></div><pre class="rust"><code><span class="kw">use </span>frame::prelude::<span class="kw-2">*</span>;
+<a href="#26" id="26">26</a>
+<a href="#27" id="27">27</a>
+<a href="#28" id="28">28</a>
+<a href="#29" id="29">29</a>
+<a href="#30" id="30">30</a>
+</pre></div><pre class="rust"><code><span class="doccomment">//! Reusable parts of the currency pallet in different versions.
 
-<span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>config_basic_outer {
+</span><span class="kw">use </span>frame::prelude::<span class="kw-2">*</span>;
+
+<span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>storage {
 	<span class="kw">use super</span>::<span class="kw-2">*</span>;
 
 	<span class="attr">#[pallet_section]
-	</span><span class="kw">mod </span>config_basic {
+	</span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>storage {
 		<span class="attr">#[docify::export]
-		#[pallet::config]
-		</span><span class="kw">pub trait </span>Config: frame_system::Config {}
+		</span><span class="doccomment">/// Single storage item, of type `Balance`.
+		</span><span class="attr">#[pallet::storage]
+		</span><span class="kw">pub type </span>TotalIssuance&lt;T: Config&gt; = StorageValue&lt;<span class="kw">_</span>, Balance&gt;;
+
+		<span class="attr">#[docify::export]
+		</span><span class="doccomment">/// A mapping from `T::AccountId` to `Balance`
+		</span><span class="attr">#[pallet::storage]
+		</span><span class="kw">pub type </span>Balances&lt;T: Config&gt; = StorageMap&lt;<span class="kw">_</span>, <span class="kw">_</span>, T::AccountId, Balance&gt;;
 	}
 }
 
-<span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>config_event_outer {
+<span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>pallet {
 	<span class="kw">use super</span>::<span class="kw-2">*</span>;
 
 	<span class="attr">#[pallet_section]
-	</span><span class="kw">mod </span>config_event {
-		<span class="attr">#[pallet::config]
-		</span><span class="kw">pub trait </span>Config: frame_system::Config {
-			<span class="kw">type </span>RuntimeEvent: From&lt;Event&lt;<span class="self">Self</span>&gt;&gt;
-				+ IsType&lt;&lt;<span class="self">Self </span><span class="kw">as </span>frame_system::Config&gt;::RuntimeEvent&gt;;
-		}
+	</span><span class="kw">pub</span>(<span class="kw">crate</span>) <span class="kw">mod </span>pallet {
+		<span class="attr">#[pallet::pallet]
+		</span><span class="kw">pub struct </span>Pallet&lt;T&gt;(<span class="kw">_</span>);
 	}
 }
 </code></pre></div></section></main></body></html>

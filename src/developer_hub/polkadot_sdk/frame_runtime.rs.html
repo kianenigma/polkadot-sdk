@@ -173,7 +173,7 @@
 //! ### Example
 //!
 //! The following examples showcases a minimal pallet.
-</span><span class="attr">#![doc = <span class="macro">docify::embed_run!</span>(<span class="string">&quot;src/polkadot_sdk/frame_runtime.rs&quot;</span>, pallet)]
+</span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;src/polkadot_sdk/frame_runtime.rs&quot;</span>, pallet)]
 </span><span class="doccomment">//!
 //! ## Runtime
 //!
@@ -188,13 +188,13 @@
 //!
 //! The following example shows a (test) runtime that is composing the pallet demonstrated above,
 //! next to the [`frame::prelude::frame_system`] pallet, into a runtime.
-</span><span class="attr">#![doc = <span class="macro">docify::embed_run!</span>(<span class="string">&quot;src/polkadot_sdk/frame_runtime.rs&quot;</span>, runtime)]
+</span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;src/polkadot_sdk/frame_runtime.rs&quot;</span>, runtime)]
 </span><span class="doccomment">//!
 </span><span class="attr">#![doc = <span class="macro">simple_mermaid::mermaid!</span>(<span class="string">&quot;../../../docs/mermaid/substrate_with_frame.mmd&quot;</span>)]
 
 #[cfg(test)]
 </span><span class="kw">mod </span>tests {
-	<span class="kw">use </span>frame::{prelude::<span class="kw-2">*</span>, testing_prelude::<span class="kw-2">*</span>};
+	<span class="kw">use </span>frame::prelude::<span class="kw-2">*</span>;
 
 	<span class="attr">#[docify::export]
 	#[frame::pallet(dev_mode)]

@@ -359,6 +359,8 @@
 <a href="#359" id="359">359</a>
 <a href="#360" id="360">360</a>
 <a href="#361" id="361">361</a>
+<a href="#362" id="362">362</a>
+<a href="#363" id="363">363</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file is part of Substrate.
 
 // Copyright (C) Parity Technologies (UK) Ltd.
@@ -424,6 +426,8 @@
 /// define a macro is `#[frame::pallet] mod pallet { .. }`, followed by `#[pallet::foo]`,
 /// `#[pallet::bar]` inside the mod.
 </span><span class="kw">pub use </span>frame_support::pallet;
+
+<span class="kw">pub use </span>frame_support::pallet_macros::{import_section, pallet_section};
 
 <span class="doccomment">/// The logging library of the runtime. Can be normally like the classic `log` crate.
 </span><span class="kw">pub use </span>log;

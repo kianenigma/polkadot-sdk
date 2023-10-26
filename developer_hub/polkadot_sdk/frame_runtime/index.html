@@ -50,7 +50,7 @@ make as few assumptions about the general runtime as possible. A pallet is analo
 <h4 id="example"><a href="#example">Example</a></h4>
 <p>The following examples showcases a minimal pallet.</p>
 
-<div class="example-wrap"><pre class="rust rust-example-rendered"><code>	<span class="attr">#[frame::pallet(dev_mode)]
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code>	<span class="attr">#[frame::pallet(dev_mode)]
 	</span><span class="kw">pub mod </span>pallet {
 		<span class="kw">use super</span>::<span class="kw-2">*</span>;
 
@@ -86,7 +86,7 @@ runtime-apis that</p>
 <p>The following example shows a (test) runtime that is composing the pallet demonstrated above,
 next to the [<code>frame::prelude::frame_system</code>] pallet, into a runtime.</p>
 
-<div class="example-wrap"><pre class="rust rust-example-rendered"><code>	<span class="kw">pub mod </span>runtime {
+<div class="example-wrap ignore"><a href="#" class="tooltip" title="This example is not tested">ⓘ</a><pre class="rust rust-example-rendered"><code>	<span class="kw">pub mod </span>runtime {
 		<span class="kw">use </span><span class="kw">super</span>::pallet <span class="kw">as </span>pallet_example;
 		<span class="kw">use </span>frame::{prelude::<span class="kw-2">*</span>, testing_prelude::<span class="kw-2">*</span>};
 
