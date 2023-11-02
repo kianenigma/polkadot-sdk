@@ -123,6 +123,10 @@
 <a href="#123" id="123">123</a>
 <a href="#124" id="124">124</a>
 <a href="#125" id="125">125</a>
+<a href="#126" id="126">126</a>
+<a href="#127" id="127">127</a>
+<a href="#128" id="128">128</a>
+<a href="#129" id="129">129</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! # FRAME
 //!
 //! ```no_compile
@@ -193,8 +197,12 @@
 //! The following example shows a (test) runtime that is composing the pallet demonstrated above,
 //! next to the [`frame::prelude::frame_system`] pallet, into a runtime.
 </span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;src/polkadot_sdk/frame_runtime.rs&quot;</span>, runtime)]
+</span><span class="doccomment">//!
+//! ## More Examples
+//!
+//! You can find more FRAME examples that revolve around specific features at [`pallet_examples`]
 
-#[cfg(test)]
+</span><span class="attr">#[cfg(test)]
 </span><span class="kw">mod </span>tests {
 	<span class="kw">use </span>frame::prelude::<span class="kw-2">*</span>;
 
