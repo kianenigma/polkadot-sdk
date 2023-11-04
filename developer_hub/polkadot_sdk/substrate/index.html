@@ -10,9 +10,9 @@ truths:</p>
 <li>Humans are fallible.</li>
 </ol>
 <p>This, makes the task of designing a correct, safe and long-lasting blockchain system hard.</p>
-<p>Nonetheless, in strive towards achieve this goal, substrate embraces the following:</p>
+<p>Nonetheless, in strive towards achieve this goal, Substrate embraces the following:</p>
 <ol>
-<li>Use of <strong>Rust</strong> as a modern, and safe programming language, which limits human error through
+<li>Use of <strong>Rust</strong> as a modern and safe programming language, which limits human error through
 various means, most notably memory and type safety.</li>
 <li>Substrate is written from the ground-up with a <em>generic, modular and extensible</em> design. This
 ensures that software components can be easily swapped and upgraded. Examples of this is
@@ -26,26 +26,28 @@ WASM blob.</li>
 <p>In essence, the meta-protocol of all Substrate based chains is the “Runtime as WASM blob”
 accord. This enables the Runtime to become inherently upgradeable, crucially without forks. The
 upgrade is merely a matter of the WASM blob being changed in the state, which is, in principle,
-same as updating an account’s balance. Learn more about this in detail, in
+same as updating an account’s balance. Learn more about this in detail in
 <a href="../../reference_docs/wasm_meta_protocol/index.html" title="mod developer_hub::reference_docs::wasm_meta_protocol"><code>crate::reference_docs::wasm_meta_protocol</code></a>.</p>
 <p><a href="../../../frame/index.html" title="mod frame"><code>frame</code></a>, Substrate’s default runtime development library, takes the above safety practices
 even further by embracing a declarative programming model whereby correctness is enhanced and
 the system is highly configurable through parameterization. Learn more about this in
 <a href="../../reference_docs/trait_based_programming/index.html" title="mod developer_hub::reference_docs::trait_based_programming"><code>crate::reference_docs::trait_based_programming</code></a>.</p>
 <h3 id="how-to-get-stared"><a href="#how-to-get-stared">How to Get Stared</a></h3>
-<p>While most developer develop using <a href="../frame_runtime/index.html" title="mod developer_hub::polkadot_sdk::frame_runtime"><code>crate::polkadot_sdk::frame_runtime</code></a>, it is worth noting a
+<p>While most developers use <a href="../frame_runtime/index.html" title="mod developer_hub::polkadot_sdk::frame_runtime"><code>crate::polkadot_sdk::frame_runtime</code></a>, it is worth noting a
 few (niche) alternatives:</p>
-<p>1.It is entirely possible to craft a substrate-based runtime without FRAME, an example of which
-can be found <a href="https://github.com/JoshOrndorff/frameless-node-template">here</a>.
-2. Substrate’s client side code, as mentioned above, is also highly configurable, and many teams
+<ol>
+<li>It is entirely possible to craft a substrate-based runtime without FRAME, an example of which
+can be found <a href="https://github.com/JoshOrndorff/frameless-node-template">here</a>.</li>
+<li>Substrate’s client side code, as mentioned above, is also highly configurable, and many teams
 embark on customizing the client, for example with a custom consensus algorithm. Notable
-examples of this are:</p>
+examples of this are:</li>
+</ol>
 <ul>
 <li><a href="https://github.com/Cardinal-Cryptography/aleph-node">https://github.com/Cardinal-Cryptography/aleph-node</a></li>
 <li><a href="https://github.com/availproject/avail">https://github.com/availproject/avail</a></li>
 </ul>
 <ol start="3">
-<li>A number of substrate-based templates are listed in <a href="../templates/index.html" title="mod developer_hub::polkadot_sdk::templates"><code>crate::polkadot_sdk::templates</code></a>.</li>
+<li>A number of Substrate-based templates are listed in <a href="../templates/index.html" title="mod developer_hub::polkadot_sdk::templates"><code>crate::polkadot_sdk::templates</code></a>.</li>
 </ol>
 <h3 id="structure"><a href="#structure">Structure</a></h3>
 <p>Substrate is a massive cargo workspace with hundreds of crates, therefore it is useful to know

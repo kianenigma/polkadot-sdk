@@ -973,6 +973,103 @@
 <a href="#973" id="973">973</a>
 <a href="#974" id="974">974</a>
 <a href="#975" id="975">975</a>
+<a href="#976" id="976">976</a>
+<a href="#977" id="977">977</a>
+<a href="#978" id="978">978</a>
+<a href="#979" id="979">979</a>
+<a href="#980" id="980">980</a>
+<a href="#981" id="981">981</a>
+<a href="#982" id="982">982</a>
+<a href="#983" id="983">983</a>
+<a href="#984" id="984">984</a>
+<a href="#985" id="985">985</a>
+<a href="#986" id="986">986</a>
+<a href="#987" id="987">987</a>
+<a href="#988" id="988">988</a>
+<a href="#989" id="989">989</a>
+<a href="#990" id="990">990</a>
+<a href="#991" id="991">991</a>
+<a href="#992" id="992">992</a>
+<a href="#993" id="993">993</a>
+<a href="#994" id="994">994</a>
+<a href="#995" id="995">995</a>
+<a href="#996" id="996">996</a>
+<a href="#997" id="997">997</a>
+<a href="#998" id="998">998</a>
+<a href="#999" id="999">999</a>
+<a href="#1000" id="1000">1000</a>
+<a href="#1001" id="1001">1001</a>
+<a href="#1002" id="1002">1002</a>
+<a href="#1003" id="1003">1003</a>
+<a href="#1004" id="1004">1004</a>
+<a href="#1005" id="1005">1005</a>
+<a href="#1006" id="1006">1006</a>
+<a href="#1007" id="1007">1007</a>
+<a href="#1008" id="1008">1008</a>
+<a href="#1009" id="1009">1009</a>
+<a href="#1010" id="1010">1010</a>
+<a href="#1011" id="1011">1011</a>
+<a href="#1012" id="1012">1012</a>
+<a href="#1013" id="1013">1013</a>
+<a href="#1014" id="1014">1014</a>
+<a href="#1015" id="1015">1015</a>
+<a href="#1016" id="1016">1016</a>
+<a href="#1017" id="1017">1017</a>
+<a href="#1018" id="1018">1018</a>
+<a href="#1019" id="1019">1019</a>
+<a href="#1020" id="1020">1020</a>
+<a href="#1021" id="1021">1021</a>
+<a href="#1022" id="1022">1022</a>
+<a href="#1023" id="1023">1023</a>
+<a href="#1024" id="1024">1024</a>
+<a href="#1025" id="1025">1025</a>
+<a href="#1026" id="1026">1026</a>
+<a href="#1027" id="1027">1027</a>
+<a href="#1028" id="1028">1028</a>
+<a href="#1029" id="1029">1029</a>
+<a href="#1030" id="1030">1030</a>
+<a href="#1031" id="1031">1031</a>
+<a href="#1032" id="1032">1032</a>
+<a href="#1033" id="1033">1033</a>
+<a href="#1034" id="1034">1034</a>
+<a href="#1035" id="1035">1035</a>
+<a href="#1036" id="1036">1036</a>
+<a href="#1037" id="1037">1037</a>
+<a href="#1038" id="1038">1038</a>
+<a href="#1039" id="1039">1039</a>
+<a href="#1040" id="1040">1040</a>
+<a href="#1041" id="1041">1041</a>
+<a href="#1042" id="1042">1042</a>
+<a href="#1043" id="1043">1043</a>
+<a href="#1044" id="1044">1044</a>
+<a href="#1045" id="1045">1045</a>
+<a href="#1046" id="1046">1046</a>
+<a href="#1047" id="1047">1047</a>
+<a href="#1048" id="1048">1048</a>
+<a href="#1049" id="1049">1049</a>
+<a href="#1050" id="1050">1050</a>
+<a href="#1051" id="1051">1051</a>
+<a href="#1052" id="1052">1052</a>
+<a href="#1053" id="1053">1053</a>
+<a href="#1054" id="1054">1054</a>
+<a href="#1055" id="1055">1055</a>
+<a href="#1056" id="1056">1056</a>
+<a href="#1057" id="1057">1057</a>
+<a href="#1058" id="1058">1058</a>
+<a href="#1059" id="1059">1059</a>
+<a href="#1060" id="1060">1060</a>
+<a href="#1061" id="1061">1061</a>
+<a href="#1062" id="1062">1062</a>
+<a href="#1063" id="1063">1063</a>
+<a href="#1064" id="1064">1064</a>
+<a href="#1065" id="1065">1065</a>
+<a href="#1066" id="1066">1066</a>
+<a href="#1067" id="1067">1067</a>
+<a href="#1068" id="1068">1068</a>
+<a href="#1069" id="1069">1069</a>
+<a href="#1070" id="1070">1070</a>
+<a href="#1071" id="1071">1071</a>
+<a href="#1072" id="1072">1072</a>
 </pre></div><pre class="rust"><code><span class="comment">// This file is part of Substrate.
 
 // Copyright (C) Parity Technologies (UK) Ltd.
@@ -1002,26 +1099,71 @@
 	StorageHasher, Twox128,
 };
 <span class="kw">use </span>codec::{Decode, Encode, EncodeLike, FullCodec, MaxEncodedLen};
+<span class="kw">use </span>frame_support::storage::StorageDecodeNonDedupLength;
 <span class="kw">use </span>sp_arithmetic::traits::SaturatedConversion;
 <span class="kw">use </span>sp_metadata_ir::{StorageEntryMetadataIR, StorageEntryTypeIR};
 <span class="kw">use </span>sp_std::prelude::<span class="kw-2">*</span>;
 
-<span class="doccomment">/// A type that allow to store values for `(key1, key2)` couple. Similar to `StorageMap` but allow
-/// to iterate and remove value associated to first key.
+<span class="doccomment">/// A type representing a *double map* in storage. This structure associates a pair of keys with a
+/// value of a specified type stored on-chain.
 ///
-/// Each value is stored at:
-/// ```nocompile
-/// Twox128(Prefix::pallet_prefix())
-/// 		++ Twox128(Prefix::STORAGE_PREFIX)
-/// 		++ Hasher1(encode(key1))
-/// 		++ Hasher2(encode(key2))
+/// A double map with keys `k1` and `k2` can be likened to a
+/// [`StorageMap`](frame_support::storage::types::StorageMap) with a key of type `(k1, k2)`.
+/// However, a double map offers functions specific to each key, enabling partial iteration and
+/// deletion based on one key alone.
+///
+/// Also, conceptually, a double map is a special case of a
+/// [`StorageNMap`](frame_support::storage::types::StorageNMap) using two keys.
+///
+/// For general information regarding the `#[pallet::storage]` attribute, refer to
+/// [`crate::pallet_macros::storage`].
+///
+/// # Examples
+///
+/// ### Kitchen-sink
+///
+/// ```
+/// #[frame_support::pallet]
+/// mod pallet {
+/// # 	use frame_support::pallet_prelude::*;
+/// # 	#[pallet::config]
+/// # 	pub trait Config: frame_system::Config {}
+/// # 	#[pallet::pallet]
+/// # 	pub struct Pallet&lt;T&gt;(_);
+///     /// A kitchen-sink StorageDoubleMap, with all possible additional attributes.
+///     #[pallet::storage]
+///     #[pallet::getter(fn foo)]
+///     #[pallet::storage_prefix = &quot;OtherFoo&quot;]
+///     #[pallet::unbounded]
+///     pub type Foo&lt;T&gt; = StorageDoubleMap&lt;
+/// 		_,
+///         Blake2_128Concat,
+///         u8,
+///         Twox64Concat,
+///         u16,
+///         u32,
+///         ValueQuery
+///     &gt;;
+///
+/// 	/// Alternative named syntax.
+///     #[pallet::storage]
+///     pub type Bar&lt;T&gt; = StorageDoubleMap&lt;
+///         Hasher1 = Blake2_128Concat,
+///         Key1 = u8,
+///         Hasher2 = Twox64Concat,
+///         Key2 = u16,
+///         Value = u32,
+///         QueryKind = ValueQuery
+///     &gt;;
+/// }
 /// ```
 ///
-/// # Warning
+/// ### Partial Iteration &amp; Removal
 ///
-/// If the key1s (or key2s) are not trusted (e.g. can be set by a user), a cryptographic `hasher`
-/// such as `blake2_128_concat` must be used for Hasher1 (resp. Hasher2). Otherwise, other values
-/// in storage can be compromised.
+/// When `Hasher1` and `Hasher2` implement the
+/// [`ReversibleStorageHasher`](frame_support::ReversibleStorageHasher) trait, the first key `k1`
+/// can be used to partially iterate over keys and values of the double map, and to delete items.
+</span><span class="attr">#[doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;src/storage/types/double_map.rs&quot;</span>, example_double_map_partial_operations)]
 </span><span class="kw">pub struct </span>StorageDoubleMap&lt;
 	Prefix,
 	Hasher1,
@@ -1386,6 +1528,31 @@
 		&lt;<span class="self">Self </span><span class="kw">as </span><span class="kw">crate</span>::storage::StorageDoubleMap&lt;Key1, Key2, Value&gt;&gt;::decode_len(key1, key2)
 	}
 
+	<span class="doccomment">/// Read the length of the storage value without decoding the entire value.
+	///
+	/// `Value` is required to implement [`StorageDecodeNonDedupLength`].
+	///
+	/// If the value does not exists or it fails to decode the length, `None` is returned.
+	/// Otherwise `Some(len)` is returned.
+	///
+	/// # Warning
+	///
+	///  - `None` does not mean that `get()` does not return a value. The default value is completly
+	/// ignored by this function.
+	///
+	/// - The value returned is the non-deduplicated length of the underlying Vector in storage.This
+	/// means that any duplicate items are included.
+	</span><span class="kw">pub fn </span>decode_non_dedup_len&lt;KArg1, KArg2&gt;(key1: KArg1, key2: KArg2) -&gt; <span class="prelude-ty">Option</span>&lt;usize&gt;
+	<span class="kw">where
+		</span>KArg1: EncodeLike&lt;Key1&gt;,
+		KArg2: EncodeLike&lt;Key2&gt;,
+		Value: StorageDecodeNonDedupLength,
+	{
+		&lt;<span class="self">Self </span><span class="kw">as </span><span class="kw">crate</span>::storage::StorageDoubleMap&lt;Key1, Key2, Value&gt;&gt;::decode_non_dedup_len(
+			key1, key2,
+		)
+	}
+
 	<span class="doccomment">/// Migrate an item with the given `key1` and `key2` from defunct `OldHasher1` and
 	/// `OldHasher2` to the current hashers.
 	///
@@ -1717,6 +1884,7 @@
 	<span class="kw">use crate</span>::{hash::<span class="kw-2">*</span>, storage::types::ValueQuery};
 	<span class="kw">use </span>sp_io::{hashing::twox_128, TestExternalities};
 	<span class="kw">use </span>sp_metadata_ir::{StorageEntryModifierIR, StorageEntryTypeIR, StorageHasherIR};
+	<span class="kw">use </span>std::collections::BTreeSet;
 
 	<span class="kw">struct </span>Prefix;
 	<span class="kw">impl </span>StorageInstance <span class="kw">for </span>Prefix {
@@ -1946,6 +2114,32 @@
 			<span class="macro">assert_eq!</span>(A::iter_prefix(<span class="number">4</span>).collect::&lt;Vec&lt;<span class="kw">_</span>&gt;&gt;(), <span class="macro">vec!</span>[]);
 			<span class="macro">assert_eq!</span>(A::drain_prefix(<span class="number">4</span>).collect::&lt;Vec&lt;<span class="kw">_</span>&gt;&gt;(), <span class="macro">vec!</span>[]);
 		})
+	}
+
+	<span class="attr">#[docify::export]
+	#[test]
+	</span><span class="kw">fn </span>example_double_map_partial_operations() {
+		<span class="kw">type </span>FooDoubleMap =
+			StorageDoubleMap&lt;Prefix, Blake2_128Concat, u32, Blake2_128Concat, u32, u32, ValueQuery&gt;;
+
+		TestExternalities::default().execute_with(|| {
+			FooDoubleMap::insert(<span class="number">0</span>, <span class="number">0</span>, <span class="number">42</span>);
+			FooDoubleMap::insert(<span class="number">0</span>, <span class="number">1</span>, <span class="number">43</span>);
+			FooDoubleMap::insert(<span class="number">1</span>, <span class="number">0</span>, <span class="number">314</span>);
+
+			<span class="comment">// should be equal to {0,1} (ordering is random)
+			</span><span class="kw">let </span>collected_k2_keys: BTreeSet&lt;<span class="kw">_</span>&gt; = FooDoubleMap::iter_key_prefix(<span class="number">0</span>).collect();
+			<span class="macro">assert_eq!</span>(collected_k2_keys, [<span class="number">0</span>, <span class="number">1</span>].iter().copied().collect::&lt;BTreeSet&lt;<span class="kw">_</span>&gt;&gt;());
+
+			<span class="comment">// should be equal to {42,43} (ordering is random)
+			</span><span class="kw">let </span>collected_k2_values: BTreeSet&lt;<span class="kw">_</span>&gt; = FooDoubleMap::iter_prefix_values(<span class="number">0</span>).collect();
+			<span class="macro">assert_eq!</span>(collected_k2_values, [<span class="number">42</span>, <span class="number">43</span>].iter().copied().collect::&lt;BTreeSet&lt;<span class="kw">_</span>&gt;&gt;());
+
+			<span class="comment">// Remove items from the map using k1 = 0
+			</span><span class="kw">let _ </span>= FooDoubleMap::clear_prefix(<span class="number">0</span>, u32::max_value(), <span class="prelude-val">None</span>);
+			<span class="comment">// Values associated with (0, _) should have been removed
+			</span><span class="macro">assert_eq!</span>(FooDoubleMap::iter_prefix(<span class="number">0</span>).collect::&lt;Vec&lt;<span class="kw">_</span>&gt;&gt;(), <span class="macro">vec!</span>[]);
+		});
 	}
 }
 </code></pre></div></section></main></body></html>

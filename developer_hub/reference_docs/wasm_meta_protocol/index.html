@@ -2,7 +2,7 @@
 <h2 id="wasm-meta-protocol"><a href="#wasm-meta-protocol">WASM Meta Protocol</a></h2>
 <p>All Substrate based chains adhere to a unique architectural design novel to the Polkadot
 ecosystem. We refer to this design as the “WASM Meta Protocol”.</p>
-<p>Consider the fact that a traditional blockchain software is usually a monolith artifact.
+<p>Consider the fact that a traditional blockchain software is usually a monolithic artifact.
 Upgrading any part of the system implies upgrading the entire system. This has historically led
 to cumbersome forkful upgrades to be the status quo in the blockchain ecosystem.</p>
 <p>Moreover, the idea of “storing code in the state” is explored in the context of smart contracts
@@ -10,7 +10,7 @@ platforms, but has not been expanded further.</p>
 <p>Substrate mixes these two ideas together, and takes the novel approach of storing the
 blockchain’s main “state transition function” in the main blockchain state, the same fashion
 that a smart contract platform stores the code of individual contracts in its state. As noted in
-<a href="../blockchain_state_machines/index.html" title="mod developer_hub::reference_docs::blockchain_state_machines"><code>crate::reference_docs::blockchain_state_machines</code></a>, This state transition function is called
+<a href="../blockchain_state_machines/index.html" title="mod developer_hub::reference_docs::blockchain_state_machines"><code>crate::reference_docs::blockchain_state_machines</code></a>, this state transition function is called
 the <strong>Runtime</strong>, and WASM is chosen as the bytecode. The Runtime is stored under a special key
 in the state (see [<code>sp_core::storage::well_known_keys</code>]), and can be updated as a part of the
 state transition function’s execution, just like a user’s account balance can be updated.</p>
@@ -123,7 +123,7 @@ aware of. The rest of the state, including what logic the runtime has, what bala
 has and such are all only comprehensible to the runtime.</p>
 <pre class="mermaid" style="text-align:center;background: transparent;">
 flowchart TB
-    subgraph Client[Client's Vew Of The State 🙈]
+    subgraph Client[Client's View Of The State 🙈]
         direction LR
         0x1234 --> 0x2345
         0x3456 --> 0x4567
@@ -131,7 +131,7 @@ flowchart TB
         :code --> code[wasm code]
     end
 
-    subgraph Runtime[Runtime's Vew Of The State 🙉]
+    subgraph Runtime[Runtime's View Of The State 🙉]
         direction LR
         ab[alice's balance] --> abv[known value]
         bb[bob's balance] --> bbv[known value]

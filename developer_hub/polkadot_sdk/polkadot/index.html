@@ -30,13 +30,13 @@ levels inherently unsafe.</li>
 <p>Polkadot’s answer to the above is:</p>
 <ul>
 <li>Shared Security: The idea of shared economic security sits at the core of Polkadot. Polkadot
-enables different blockchains (ie. “<em>Parachains</em>”) to pool their economic security from
-Polkadot (ie. “<em>Relay Chain</em>”).</li>
+enables different blockchains (i.e. “<em>Parachains</em>”) to pool their economic security from
+Polkadot (i.e. “<em>Relay Chain</em>”).</li>
 <li>A framework to build blockchains: In order to materialize the multi-chain future, an easy
-blockchain framework must exist. This is <a href="../substrate/index.html" title="mod developer_hub::polkadot_sdk::substrate"><code>crate::polkadot_sdk::substrate</code></a>,
-<a href="../frame_runtime/index.html" title="mod developer_hub::polkadot_sdk::frame_runtime"><code>crate::polkadot_sdk::frame_runtime</code></a> and <a href="../cumulus/index.html" title="mod developer_hub::polkadot_sdk::cumulus"><code>crate::polkadot_sdk::cumulus</code></a>.</li>
+blockchain framework must exist. This is <a href="../substrate/index.html" title="mod developer_hub::polkadot_sdk::substrate">Substrate</a>,
+<a href="../frame_runtime/index.html" title="mod developer_hub::polkadot_sdk::frame_runtime">FRAME</a> and <a href="../cumulus/index.html" title="mod developer_hub::polkadot_sdk::cumulus">Cumulus</a>.</li>
 <li>A communication language between blockchains: In order for these blockchains to communicate,
-they need a shared language. <a href="../xcm/index.html" title="mod developer_hub::polkadot_sdk::xcm"><code>crate::polkadot_sdk::xcm</code></a> is one such language.</li>
+they need a shared language. <a href="../xcm/index.html" title="mod developer_hub::polkadot_sdk::xcm">XCM</a> is one such language.</li>
 </ul>
 <blockquote>
 <p>Note that the interoperability promised by Polkadot is unparalleled in that any two parachains
@@ -46,9 +46,9 @@ security of the recipient of any message.</p>
 <p>Polkadot delivers the above vision, alongside a flexible means for parachains to schedule
 themselves with the Relay Chain. To achieve this, Polkadot has been developed with an
 architecture similar to that of a computer. Polkadot Relay Chain has a number of “cores”. Each
-is (in simple terms) is capable of progressing 1 parachain a a time. For example, a parachain
-can schedule itself for on a single core for 5 blocks.</p>
-<p>Within the scope of Polkadot 1.x, two main scheduling ways has been considered:</p>
+is (in simple terms) capable of progressing 1 parachain at a time. For example, a parachain
+can schedule itself on a single core for 5 blocks.</p>
+<p>Within the scope of Polkadot 1.x, two main scheduling ways have been considered:</p>
 <ul>
 <li>Long term Parachains, obtained through locking a sum of DOT in an auction system.</li>
 <li>on-demand Parachains, purchased through paying DOT to the relay-chain whenever needed.</li>

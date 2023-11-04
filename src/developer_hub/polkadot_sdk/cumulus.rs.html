@@ -130,6 +130,7 @@
 <a href="#130" id="130">130</a>
 <a href="#131" id="131">131</a>
 <a href="#132" id="132">132</a>
+<a href="#133" id="133">133</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! # Cumulus
 //!
 //! Substrate provides a framework through which a blockchain node and runtime can easily be
@@ -140,8 +141,8 @@
 //!
 //! ## Example: Runtime
 //!
-//! A cumulus based runtime is fairly similar to a normal [FRAME]-based runtime. Most notably, the
-//! following changes are applied to a normal FRAME-based runtime to make it a cumulus-based
+//! A Cumulus-based runtime is fairly similar to other [FRAME]-based runtimes. Most notably, the
+//! following changes are applied to a normal FRAME-based runtime to make it a Cumulus-based
 //! runtime:
 //!
 //! #### Cumulus Pallets
@@ -153,7 +154,7 @@
 //! - [`parachain-info`]
 </span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;./src/polkadot_sdk/cumulus.rs&quot;</span>, system_pallets)]
 </span><span class="doccomment">//!
-//! Given that all cumulus-based runtimes use a simple aura-based consensus mechanism, the following
+//! Given that all Cumulus-based runtimes use a simple Aura-based consensus mechanism, the following
 //! pallets also need to be added:
 //!
 //! - [`pallet-timestamp`]
@@ -162,9 +163,10 @@
 </span><span class="comment">// #![doc = docify::embed!(&quot;./src/lib.rs&quot;, consensus_pallets)]
 </span><span class="doccomment">//!
 //!
-//! Finally, a separate macro, similar to `impl_runtime_api`, which create the default set of
-//! runtime apis, will generate the parachain runtime&#39;s main additional runtime api, also known as
-//! PVF.
+//! Finally, a separate macro, similar to `impl_runtime_api`, which creates the default set of
+//! runtime APIs, will generate the parachain runtime&#39;s validation runtime API, also known as
+//! parachain validation function (PVF). Without this API, the relay chain is unable to validate blocks
+//! produced by our parachain.
 </span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;./src/polkadot_sdk/cumulus.rs&quot;</span>, validate_block)]
 </span><span class="doccomment">//!
 //!

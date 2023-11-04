@@ -117,8 +117,8 @@ details:</p>
 [<code>frame::prelude::frame_system::Config</code>], therefore we can access them in <code>T</code>.</li>
 <li>What is <code>ensure_signed</code>, and what does it do with the aforementioned <code>T::RuntimeOrigin</code>? this
 is outside the scope of this tutorial, and you can learn more about it in the origin reference
-document (<a href="../../reference_docs/origin_account_abstraction/index.html" title="mod developer_hub::reference_docs::origin_account_abstraction"><code>crate::reference_docs::origin_account_abstraction</code></a>). For now, you should only
-know the signature of the function: it takes a generic <code>T::RuntimeOrigin</code> and returns a
+document (<a href="../../reference_docs/frame_origin/index.html" title="mod developer_hub::reference_docs::frame_origin"><code>crate::reference_docs::frame_origin</code></a>). For now, you should only know the
+signature of the function: it takes a generic <code>T::RuntimeOrigin</code> and returns a
 <code>Result&lt;T::AccountId, _&gt;</code>. So by the end of this function call, we know that this dispatchable
 was signed by <code>who</code>.</li>
 </ul>
@@ -549,7 +549,7 @@ to see its definition in rust-docs:
 study them subsequently:</p>
 <ul>
 <li><a href="../../reference_docs/safe_defensive_programming/index.html" title="mod developer_hub::reference_docs::safe_defensive_programming"><code>crate::reference_docs::safe_defensive_programming</code></a>.</li>
-<li><a href="../../reference_docs/origin_account_abstraction/index.html" title="mod developer_hub::reference_docs::origin_account_abstraction"><code>crate::reference_docs::origin_account_abstraction</code></a>.</li>
+<li><a href="../../reference_docs/frame_origin/index.html" title="mod developer_hub::reference_docs::frame_origin"><code>crate::reference_docs::frame_origin</code></a>.</li>
 <li><a href="../../reference_docs/frame_composite_enums/index.html" title="mod developer_hub::reference_docs::frame_composite_enums"><code>crate::reference_docs::frame_composite_enums</code></a>.</li>
 <li>The pallet we wrote in this tutorial was using <code>dev_mode</code>, learn more in
 [<code>frame::pallet_macros::config</code>].</li>
