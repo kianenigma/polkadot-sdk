@@ -130,7 +130,6 @@
 <a href="#130" id="130">130</a>
 <a href="#131" id="131">131</a>
 <a href="#132" id="132">132</a>
-<a href="#133" id="133">133</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! # Cumulus
 //!
 //! Substrate provides a framework through which a blockchain node and runtime can easily be
@@ -149,27 +148,27 @@
 //!
 //! A parachain runtime should use a number of pallets that are provided by Cumulus. Notably:
 //!
-//! - [`frame-system`], like all FRAME-based runtimes.
-//! - [`cumulus-pallet-parachain-system`]
-//! - [`parachain-info`]
+//! - [`frame-system`](frame::prelude::frame_system), like all FRAME-based runtimes.
+//! - [`cumulus_pallet_parachain_system`]
+//! - [`parachain_info`]
 </span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;./src/polkadot_sdk/cumulus.rs&quot;</span>, system_pallets)]
 </span><span class="doccomment">//!
 //! Given that all Cumulus-based runtimes use a simple Aura-based consensus mechanism, the following
 //! pallets also need to be added:
 //!
-//! - [`pallet-timestamp`]
-//! - [`pallet-aura`]
-//! - [`cumulus-pallet-aura-ext`]
+//! - [`pallet_timestamp`]
+//! - [`pallet_aura`]
+//! - [`cumulus_pallet_aura_ext`]
 </span><span class="comment">// #![doc = docify::embed!(&quot;./src/lib.rs&quot;, consensus_pallets)]
 </span><span class="doccomment">//!
 //!
-//! Finally, a separate macro, similar to `impl_runtime_api`, which creates the default set of
-//! runtime APIs, will generate the parachain runtime&#39;s validation runtime API, also known as
-//! parachain validation function (PVF). Without this API, the relay chain is unable to validate blocks
-//! produced by our parachain.
+//! Finally, a separate macro, similar to
+//! [`impl_runtime_api`](frame::runtime::prelude::impl_runtime_apis), which creates the default set
+//! of runtime APIs, will generate the parachain runtime&#39;s validation runtime API, also known as
+//! parachain validation function (PVF). Without this API, the relay chain is unable to validate
+//! blocks produced by our parachain.
 </span><span class="attr">#![doc = <span class="macro">docify::embed!</span>(<span class="string">&quot;./src/polkadot_sdk/cumulus.rs&quot;</span>, validate_block)]
 </span><span class="doccomment">//!
-//!
 //! ## Example: Running a node
 //!
 //! TODO
@@ -177,7 +176,6 @@
 //! ---
 //!
 //! [FRAME]: crate::polkadot_sdk::frame_runtime
-//! [`frame_system`]: frame::prelude::frame_system
 
 </span><span class="attr">#![deny(rustdoc::broken_intra_doc_links)]
 #![deny(rustdoc::private_intra_doc_links)]

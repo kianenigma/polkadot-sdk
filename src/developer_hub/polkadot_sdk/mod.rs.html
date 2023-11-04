@@ -124,6 +124,18 @@
 <a href="#124" id="124">124</a>
 <a href="#125" id="125">125</a>
 <a href="#126" id="126">126</a>
+<a href="#127" id="127">127</a>
+<a href="#128" id="128">128</a>
+<a href="#129" id="129">129</a>
+<a href="#130" id="130">130</a>
+<a href="#131" id="131">131</a>
+<a href="#132" id="132">132</a>
+<a href="#133" id="133">133</a>
+<a href="#134" id="134">134</a>
+<a href="#135" id="135">135</a>
+<a href="#136" id="136">136</a>
+<a href="#137" id="137">137</a>
+<a href="#138" id="138">138</a>
 </pre></div><pre class="rust"><code><span class="doccomment">//! # Polkadot SDK
 //!
 //! The [Polkadot SDK repository](https://github.com/paritytech/polkadot-sdk) provides the main
@@ -199,20 +211,23 @@
 //!
 //! ### Summary
 //!
-//! The following diagram summarizes how components of the Polkadot-SDK work together:
-</span><span class="attr">#![doc = <span class="macro">simple_mermaid::mermaid!</span>(<span class="string">&quot;../../../docs/mermaid/polkadot_sdk.mmd&quot;</span>)]
+//! The following diagram summarizes how components of the Polkadot-SDK:
+</span><span class="attr">#![doc = <span class="macro">simple_mermaid::mermaid!</span>(<span class="string">&quot;../../../docs/mermaid/polkadot_sdk_substrate.mmd&quot;</span>)]
 </span><span class="doccomment">//!
-//! 1. A Substrate-based chain is a blockchain composed of a &quot;Runtime&quot; and a &quot;Client&quot;. As noted
-//!    above, the &quot;Runtime&quot; is the application logic of the blockchain, and the &quot;Client&quot; is
-//!    everything else. See [`reference_docs::wasm_meta_protocol`] for an in-depth explanation of
-//!    this. The former is built with [`frame`], and the latter is built with Substrate client
-//!    libraries.
-//! 2. Polkadot is itself a Substrate-based chain, composed of the exact same two components.
-//!    The Polkadot client code is in [`polkadot`], and the Polkadot runtimes are controlled by the
-//!    [Polkadot Fellowship](https://github.com/polkadot-fellows).
-//! 3. A parachain is a &quot;special&quot; Substrate based chain, whereby both the client and the runtime
-//!    components have became &quot;Polkadot-aware&quot; using Cumulus.
+//! A Substrate-based chain is a blockchain composed of a &quot;Runtime&quot; and a &quot;Client&quot;. As noted above,
+//! the &quot;Runtime&quot; is the application logic of the blockchain, and the &quot;Client&quot; is everything else.
+//! See [`reference_docs::wasm_meta_protocol`] for an in-depth explanation of this. The former is
+//! built with [`frame`], and the latter is built with Substrate client libraries.
 //!
+//! &gt; You can think of a substrate-based chain as a while-labeled blockchain.
+</span><span class="attr">#![doc = <span class="macro">simple_mermaid::mermaid!</span>(<span class="string">&quot;../../../docs/mermaid/polkadot_sdk_polkadot.mmd&quot;</span>)]
+</span><span class="doccomment">//! Polkadot is itself a Substrate-based chain, composed of the exact same two components.
+//!
+//!
+//! A parachain is a &quot;special&quot; Substrate-based chain, whereby both the client and the runtime
+//! components have became &quot;Polkadot-aware&quot; using Cumulus.
+</span><span class="attr">#![doc = <span class="macro">simple_mermaid::mermaid!</span>(<span class="string">&quot;../../../docs/mermaid/polkadot_sdk_parachain.mmd&quot;</span>)]
+</span><span class="doccomment">//!
 //! ## History
 //!
 //! Substrate, Polkadot and Cumulus used to each have their own repository, each of which is now
@@ -227,6 +242,15 @@
 //! - [`parity-db`](https://github.com/paritytech/parity-db)
 //! - [`trie`](https://github.com/paritytech/trie)
 //! - [`parity-common`](https://github.com/paritytech/parity-common)
+//!
+//! ## Trophy Section: Notable Downstream Projects
+//!
+//! A list of projects and tools in the blockchain ecosystem that one way or another parts of the
+//! Polkadot SDK.:
+//!
+//! * [Polygon&#39;s spin-off, Avail](https://github.com/availproject/avail)
+//! * [Cardano Partner Chains](https://iohk.io/en/blog/posts/2023/11/03/partner-chains-are-coming-to-cardano/)
+//! * [Starknet&#39;s Madara Sequencer](https://github.com/keep-starknet-strange/madara)
 //!
 //! [`substrate`]: crate::polkadot_sdk::substrate
 //! [`frame`]: crate::polkadot_sdk::frame_runtime
